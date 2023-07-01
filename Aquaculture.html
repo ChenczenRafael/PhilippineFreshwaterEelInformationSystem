@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Aquaculture</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style>
+html, body 
+{
+margin: 0;
+padding: 0;
+}
+.header
+{
+background-image: url('aqua.jpg');
+background-size: cover;
+color: white;
+padding: 100px;
+text-align: center;
+}
+.header h1 
+{
+font-size: 48px;
+font-weight: bold;
+margin-bottom: 20px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}   
+.header p 
+{
+font-size: 24px;
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+.nav-bar 
+{
+background-color: #04a00c;
+padding: 10px;
+text-align:center;
+font-weight: 900;
+font-family: Georgia;
+font-synthesis: weight;
+margin:0;
+height: 50px;
+}
+.nav-bar a 
+{
+color: #ffffff;
+text-decoration: none;
+margin: 10px;
+font-size: 20px;
+}
+.nav-bar a.active 
+{
+color: #000000;
+background-color: #f3e707;
+border-radius: 4px;
+padding: 5px;
+}
+.content 
+{
+padding: 20px;
+background-image:linear-gradient(to bottom, rgb(205, 24, 90),rgb(183, 193, 7));
+}
+.box
+{
+background-color: #f0eee2ce;
+padding:0x;
+border: 5px solid #000000;
+border-radius: 20px;
+text-align: center;
+margin:0;
+}
+.content a
+{
+font-size: 30px;
+font-family:Courier;
+font-weight: bold;
+background-blend-mode: color;
+background-clip:content-box;
+-webkit-background-clip:content-box;
+-moz-background-clip:content-box;
+margin:0;
+padding:0;
+color: rgb(250, 7, 7);
+background-color: rgba(221, 153, 205, 0.891);
+display:flexbox;
+}
+.footer 
+{
+background-color: #333;
+color: #fff;
+padding: 10px;
+text-align: center;
+position:relative;
+width: 100%;
+bottom: 0;
+}
+@media (max-width: 768px) 
+{
+.header, .nav-bar, .nav-bar a, .content, .footer 
+{
+font-size: 14px;
+padding: 5px;
+margin: auto;
+}
+}
+</style>
+</head>
+<body>
+<div class="header">
+<h1>Philippine Freshwater Eel Information System</h1>
+<br>
+<p>Explore and Enjoy</p>
+</div>
+<div class="nav-bar">
+<a href="index.html">Home</a>
+<a href="Ecology.html">Ecology</a>
+<a href="Taxonomy.html">Taxonomy</a>
+<a href="Management.html">Management</a>
+<a href="#aquaculture" class="active">Aquaculture</a>
+</div>
+<div class="content">
+<div class="container">
+<div class="box">
+<h1>Aquaculture</h1>
+<br>
+<a href="Aquaculture/A1.html">Preparation</a>
+<br>
+<div class="accordion-content">
+<a href="Aquaculture/A2.html">Maintenance</a>
+<br>
+<a href="Aquaculture/A3.html">Harvesting</a>
+<br>
+<a href="Aquaculture/A4.html">Marketing</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>BSIS 4</p>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () 
+{
+const accordionItems = document.querySelectorAll(".accordion-item");
+accordionItems.forEach(function (item) 
+{
+const accordionHeader = item.querySelector(".accordion-header");
+const accordionContent = item.querySelector(".accordion-content");
+accordionHeader.addEventListener("click", function () 
+{
+item.classList.toggle("active");
+if (accordionContent.style.display === "block") 
+{
+accordionContent.style.display = "none";
+accordionHeader.querySelector(".accordion-icon").textContent = "+";
+} 
+else 
+{
+accordionContent.style.display = "block";
+accordionHeader.querySelector(".accordion-icon").textContent = "-";
+}
+});
+});
+});
+</script>
+</body>
+</html>
